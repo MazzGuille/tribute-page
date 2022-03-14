@@ -1,37 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
 
-:root{
---primary: #A001EB;
---secundary: #7500AB;
---dark: #49006B;
---light: #ffffff;
+:root {
+  --primary: #a001eb;
+  --secundary: #7500ab;
+  --dark: #49006b;
+  --light: #ffffff;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.poshi-icon{
+.poshi-icon {
   border-radius: 50%;
 }
 
-html{
-  font-family: 'Concert One', cursive;
+html {
+  font-family: "Concert One", cursive;
   font-size: 10px;
   color: var(--light);
 }
 
-body{
-  padding: 2.5rem;  
+body {
+  padding: 2.5rem;
 }
 
-.wrapper{
+.wrapper {
   max-width: 90%;
   margin-left: auto;
   margin-right: auto;
-  background-color: var(--primary);
+  background: rgb(160, 1, 235);
+  background: linear-gradient(
+    180deg,
+    rgba(160, 1, 235, 0.7) 33.33%,
+    rgba(117, 0, 171, 0.7) 66.66%,
+    rgba(73, 0, 107, 0.7) 100%
+  );
   padding: 1rem;
   border-radius: 1.6rem;
   display: flex;
@@ -40,76 +46,85 @@ body{
   justify-content: center;
 }
 
-.main{
+.main {
   height: auto;
 }
 
-.header-container{
+.header-container {
   padding: 1rem;
 }
 
-.title, .subtitle{
-text-align: center;
-font-size: 5rem;
+.title,
+.subtitle {
+  text-align: center;
+  font-size: 5rem;
 }
 
-.subtitle{
+.subtitle {
   font-size: 2.8rem;
 }
 
-.gallery{
+.gallery {
   display: grid;
   grid-template-columns: repeat(4, minmax(1rem, 1fr));
   grid-template-rows: auto;
-  grid-template-areas: 
-  "embarazo boda amigas grad"
-  "bb boda playa playa"
-  ;
+  grid-template-areas:
+    "embarazo boda amigas grad"
+    "bb boda playa playa";
   padding: 1.2rem;
 }
 
-img{
+img {
   height: 100%;
-  width: 100%;  
+  width: 100%;
 }
 
-.embarazo{
+.embarazo {
   grid-area: embarazo;
   height: 100%;
-  width: 100%;  
+  width: 100%;
 }
 
-.caracolis{
+.caracolis {
   grid-area: bb;
   height: 100%;
-  width: 100%;  
+  width: 100%;
 }
 
-.boda{
+.boda {
   grid-area: boda;
   height: 100%;
-  width: 100%;  
+  width: 100%;
 }
 
-.amigas{
+.amigas {
   grid-area: amigas;
   height: 100%;
-  width: 100%;  
+  width: 100%;
 }
 
-.grad{
+.grad {
   grid-area: grad;
   height: 100%;
-  width: 100%;  
+  width: 100%;
 }
 
-.playa{
+.playa {
   grid-area: playa;
   height: 100%;
-  width: 100%;  
+  width: 100%;
 }
 
-.cronologia{
+.embarazo:hover,
+.caracolis:hover,
+.boda:hover,
+.amigas:hover,
+.grad:hover,
+.playa:hover {
+  cursor: pointer;
+}
+
+.cronologia {
   margin-top: 2rem;
   padding: 1.4rem;
   display: flex;
@@ -118,52 +133,73 @@ img{
   justify-content: center;
 }
 
-.headline{
-  font-size: 2.8rem;
+.headline {
+  font-size: 3rem;
 }
 
-ul{
-  font-size: 2.4rem;
+ul {
+  font-size: 2.7rem;
   list-style: none;
 }
 
-.quote{
-  font-size: 2.45rem;
+.cita {
+  font-size: 2.8rem;
   margin-top: 1.3rem;
 }
 
-.footer{
+.wiki-link {
+  color: var(--light);
+  text-decoration: none;
+}
+
+.footer {
   font-size: 2.45rem;
   margin-top: 1.3rem;
   text-align: center;
+  font-size: 3rem;
+  color: white;
+  padding: 1rem;
 }
 
-.wiki-link{
-  color: var(--dark);
+.btn{
+  border-radius: 1.6rem;
+  background-color: var(--primary);
+  width: 20rem;
+  height: 3rem;
+  outline: none;
+  color: var(--light);
+  font-size: 1.6rem;
 }
 
-@media(max-width: 700px){
- 
-    .main{
-      height: auto;
-    }
+.btn:hover{
+  cursor: pointer;
+  background-color: var(--secundary);
+}
 
-  .gallery{
+.hr {
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  .main {
+    height: auto;
+  }
+
+  .gallery {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 16.66%;
-    grid-template-areas: 
-    "embarazo" 
-    "bb" 
-    "boda" 
-    "amigas"
-     "grad"    
-    "playa"
-    ;
+    grid-template-areas:
+      "embarazo"
+      "bb"
+      "boda"
+      "amigas"
+      "grad"
+      "playa";
     padding: 1.2rem;
   }
 
-  .headline{
+  .headline {
     text-align: center;
   }
 }

@@ -71,3 +71,17 @@ sr.reveal('.cronologia',{
     distance: '-100px',
     reset: true
 });
+
+sr.reveal('.ani1',{
+    duration: 2500,
+    origin: 'top',
+    distance: '-100px',
+    reset: true
+});
+
+sr.reveal('.ani2',{
+    duration: 2500,
+    origin: 'top',
+    distance: '-100px',
+    reset: true
+});
