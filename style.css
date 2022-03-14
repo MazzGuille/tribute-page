@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+:root{
+--primary: #A001EB;
+--secundary: #7500AB;
+--dark: #49006B;
+--light: #ffffff;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-family: 'Concert One', cursive;
+  font-size: 10px;
+  color: var(--light);
+}
+
+body{
+  padding: 2.5rem;
+  
+}
+
+.header-container{
+  padding: 1rem;
+}
+
+.title, .subtitle{
+text-align: center;
+font-size: 5rem;
+}
+
+.subtitle{
+  font-size: 2.8rem;
+}
+
+.wrapper{
+  max-width: 100%;
+  background-color: var(--primary);
+  padding: 1rem;
+  border-radius: 1.6rem;
+}
+
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(1rem, 1fr));
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "embarazo boda amigas grad"
+  "bb boda playa playa"
+  ;
+  padding: 1.2rem;
+}
+
+img{
+  height: 100%;
+  width: 100%;  
+}
+
+.embarazo{
+  grid-area: embarazo;
+  height: 100%;
+  width: 100%;  
+}
+
+.caracolis{
+  grid-area: bb;
+  height: 100%;
+  width: 100%;  
+}
+
+.boda{
+  grid-area: boda;
+  height: 100%;
+  width: 100%;  
+}
+
+.amigas{
+  grid-area: amigas;
+  height: 100%;
+  width: 100%;  
+}
+
+.grad{
+  grid-area: grad;
+  height: 100%;
+  width: 100%;  
+}
+
+.playa{
+  grid-area: playa;
+  height: 100%;
+  width: 100%;  
+}
+
+.cronologia{
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.headline{
+  font-size: 2.8rem;
+}
+
+ul{
+  font-size: 2.4rem;
+  list-style: none;
+}
+
+.quote{
+  font-size: 2.45rem;
+  margin-top: 1.3rem;
+}
+
+.footer{
+  font-size: 2.45rem;
+  margin-top: 1.3rem;
+  text-align: center;
+}
+
+.wiki-link{
+  color: var(--dark);
+}
+
+@media(max-width: 700px){
+  .gallery{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 16.66%;
+    grid-template-areas: 
+    "embarazo" 
+    "bb" 
+    "boda" 
+    "amigas"
+     "grad"    
+    "playa"
+    ;
+    padding: 1.2rem;
+  }
+}
